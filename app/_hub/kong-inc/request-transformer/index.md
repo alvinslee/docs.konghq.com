@@ -65,7 +65,7 @@ params:
       description: List of header names. Unset the header(s) with the given name.
     - name: remove.querystring
       required: false
-      value_in_examples: [ "qs-old-name:qs-new-name", "qs2-old-name:qs2-new-name" ]
+      value_in_examples: [ "qs-toremove", "qs-another-one" ]
       description: List of querystring names. Remove the querystring if it is present.
     - name: remove.body
       required: false
@@ -228,7 +228,7 @@ with the header `x-user-id`, i.e.`bob`
 
 ## Order of execution
 
-Plugin performs the response transformation in the following order:
+Plugin performs the request transformation in the following order:
 
 * remove → rename → replace → add → append
 
